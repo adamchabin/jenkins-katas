@@ -27,5 +27,12 @@ pipeline {
       }
     }
 
+    stage('clone down') {
+      agent any
+      steps {
+        stash(name: 'code', excludes: '.git')
+      }
+    }
+
   }
 }
