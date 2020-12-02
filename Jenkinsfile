@@ -2,7 +2,7 @@ pipeline {
   agent any
   stages {
     stage('clone down') {
-      agent host
+      agent any
       steps {
         stash(name: 'code', excludes: '.git')
       }
